@@ -3,6 +3,7 @@ package models;
 import java.util.*;
 import javax.persistence.*;
 import play.db.jpa.*;
+import play.data.validation.*;
 
 @Entity
 public class User extends Model{
@@ -19,10 +20,21 @@ public class User extends Model{
     public boolean isTeacher;
     public boolean isTutor;
 
+    //Info about teachers
+    public String workplace;
 
-    public String[] list_students_email;
-    public String[] list_tutors_email;
-    public String[] list_teachers_email;
+    //Info about students
+    public String course;
+
+    @Column
+    @ElementCollection(targetClass=String.class)
+    public List<String> list_students_email;
+    @Column
+    @ElementCollection(targetClass=String.class)
+    public List<String> list_tutors_email;
+    @Column
+    @ElementCollection(targetClass=String.class)
+    public List<String> list_teachers_email;
 
     @ManyToMany
     public List<Exercice> exercices;
@@ -40,9 +52,11 @@ public class User extends Model{
         this.isStudent = isStudent;
         this.isTeacher = isTeacher;
         this.isTutor = isTutor;
-        this.list_students_email = new String[500];
-        this.list_tutors_email = new String[500];
-        this.list_teachers_email = new String[500];
+        this.list_students_email = new ArrayList<String>();
+        this.list_tutors_email = new ArrayList<String>();
+        this.list_teachers_email = new ArrayList<String>();
+        this.workplace = null;
+        this.course = null;
 
     }
 
@@ -54,9 +68,9 @@ public class User extends Model{
 
         User teacher = User.find("byEmail", email_teacher).first();
         User student = User.find("byEmail", email_student).first();
-        teacher.list_students_email[teacher.list_students_email.length] = email_student;
+        teacher.list_students_email.add(email_student);
         teacher.save();
-        student.list_teachers_email[teacher.list_teachers_email.length] = email_teacher;
+        student.list_teachers_email.add(email_teacher);
         student.save();
         return (teacher); //need to be changed when i'll implement sessions.
     }
@@ -65,9 +79,9 @@ public class User extends Model{
 
         User tutor = User.find("byEmail", email_tutor).first();
         User student = User.find("byEmail", email_student).first();
-        tutor.list_students_email[tutor.list_students_email.length] = email_student;
+        tutor.list_students_email.add(email_student);
         tutor.save();
-        student.list_tutors_email[tutor.list_tutors_email.length] = email_tutor;
+        student.list_tutors_email.add(email_tutor);
         student.save();
         return (tutor); //need to be changed when i'll implement sessions.
     }
