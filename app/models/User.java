@@ -8,16 +8,27 @@ import play.data.validation.*;
 @Entity
 public class User extends Model{
 
+    @Required
+    @Email
     public String email;
+    @Required
     public String password;
-    public String DateOfBirth;
+    @Required
+    private String DateOfBirth;
+    @Required
     public String fullname;
+    @Required
+    @MaxSize(1)
     public String sex;
+    @Required
     public Date DateOfRegistration;
 
     //Set the type of user
+    @Required
     public boolean isStudent;
+    @Required
     public boolean isTeacher;
+    @Required
     public boolean isTutor;
 
     //Info about teachers

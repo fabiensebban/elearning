@@ -1,0 +1,36 @@
+# Users
+
+models.User(demo_tutor):
+    email:   demo_tutor
+    password:   demo
+    fullname:       Demo Tutor
+    DateOfBirth: 15/08/1991
+    sex:     m
+    DateOfRegistration:  01/11/2013
+    isTutor:   true
+    isStudent:  false
+    isTeacher:  false
+
+models.User(demo_teacher):
+    email:   demo_teacher
+    password:   demo
+    fullname:       Demo Teacher
+    DateOfBirth: 15/04/1991
+    sex:     m
+    DateOfRegistration:  01/11/2013
+    isTutor:   false
+    isStudent:  false
+    isTeacher:  true
+
+models.User(demo_student):
+    email:   demo_student
+    password:   demo
+    fullname:       Demo Student
+    DateOfBirth: 15/05/1991
+    sex:     m
+    DateOfRegistration:  01/11/2013
+    isTutor:   false
+    isStudent:  true
+    isTeacher:  false
+
+
