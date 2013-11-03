@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>E-learning - Register</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="@{'/public/stylesheets/css/bootstrap.min.css'}" />
+    <link rel="stylesheet" href="@{'/public/stylesheets/css/bootstrap-responsive.min.css'}" />
+    <link rel="stylesheet" href="@{'/public/stylesheets/css/matrix-style.css'}" />
+    <link rel="stylesheet" href="@{'/public/stylesheets/css/matrix-media.css'}" />
+    <link href="@{'/public/stylesheets/font-awesome/css/font-awesome.css'}" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<!--Header-part-->
+<div id="header">
+    <h1><a href="@index()"></a></h1>
+</div>
+<!--close-Header-part-->
+
+<!--top-Header-menu-->
+<div id="user-nav" class="navbar navbar-inverse">
+    <ul class="nav">
+    </ul>
+</div>
+
+<!--sidebar-menu-->
+<div id="sidebar"> <a href="#" class="visible-phone"><i class="icon icon-file"></i> <img src="@{'/public/images/logo_elearning.jpg'}"/></a>
+    <ul>
+        <li><a href="index.html"><i class="icon icon-edit"></i> <span>Registration</span></a> </li>
+    </ul>
+</div>
+
+<div id="content">
+    <div id="content-header">
+        <div id="breadcrumb"> <a title="Go to Home" class="tip-bottom"><i class="icon-edit"></i> Registration</a> </div>
+        <h1>Your information</h1>
+    </div>
+    <div class="container-fluid"><hr>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title"> <span class="icon"> <i class="icon-info-sign"></i> </span>
+                        <h5>Your information</h5>
+                    </div>
+                    <div class="widget-content nopadding">
+
+                      <form enctype="application/x-www-form-urlencoded" accept-charset="utf-8" method="post" action="/register/saveuser" id="basic_validate" class="form-horizontal" name="basic_validate">
+
+                          <div class="control-group">
+                                    <label class="control-label">Your Full Name</label>
+                                    <div class="controls">
+                                        <input type="text" name="fullname" value="${params.fullname}" id="fullname">
+                                        <span class="help-inline" generated="true" for="fullname">#{error 'fullname' /}</span>
+
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">Your Email</label>
+                                    <div class="controls">
+                                        <input type="text" name="email" value="${params.email}" id="email">
+                                        <span class="help-inline" generated="true" for="email">#{error 'email' /}</span>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">Password</label>
+                                    <div class="controls">
+                                        <input name="password" value="${params.password}" id="pwd" type="password">
+                                        <span class="help-inline" generated="true" for="password">#{error 'password' /}</span>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">Confirm password</label>
+                                    <div class="controls">
+                                        <input name="confirm_password" value="${params.confirm_password}" id="pwd2" type="password">
+                                        <span class="help-inline" generated="true" for="confirm_password">#{error 'confirm_password' /}</span>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">Date of birth (DD/MM/YYYY)</label>
+                                    <div class="controls">
+                                        <input type="text" name="DateOfBirth" value="${params.DateOfBirth}" id="DateOfBirth">
+                                        <span class="help-inline" generated="true" for="DateOfBirth">#{error 'DateOfBirth' /}</span>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">Sex</label>
+                                    <div class="controls">
+                                        <input type="radio" name="sex" id="sex_male" value="m"><label for="sex_male"> Male</label>
+                                        <input type="radio" name="sex" id="sex_female" value="m"><label for="sex_female"> Female</label>
+                                        <span class="help-inline" generated="true" for="sex_female">#{ifError 'sex'}Please choose your sex#{/ifError}</span>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">Type of user</label>
+                                    <div class="controls">
+                                        <input type="radio" name="typeOfUser" id="student" value="student" ><label for="student"> Student</label>
+                                        <input type="radio" name="typeOfUser" id="teacher" value="teacher"><label for="teacher"> Teacher</label>
+                                        <input type="radio" name="typeOfUser" id="tutor" value="tutor"><label for="tutor"> Tutor</label>
+                                        <span class="help-inline" generated="true" for="typeOfUser">#{ifError 'typeOfUser'}Please a type of user#{/ifError}</span>
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <input type="submit" value="Validate" class="btn btn-success">
+                                </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Footer-part-->
+<div class="row-fluid">
+    <div id="footer" class="span12"> 2013 &copy; Matrix Admin. Brought to you by <a href="http://themedesigner.in">Themedesigner.in</a> </div>
+</div>
+<!--end-Footer-part-->
+
+
+</body>
+</html>

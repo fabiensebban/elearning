@@ -14,7 +14,7 @@ public class User extends Model{
     @Required
     public String password;
     @Required
-    private String DateOfBirth;
+    public String DateOfBirth;
     @Required
     public String fullname;
     @Required
