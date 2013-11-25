@@ -9,6 +9,7 @@ import models.*;
 
 public class Application extends Controller {
 
+
     public static void index() {
         render();
     }
@@ -36,6 +37,21 @@ public class Application extends Controller {
 
     public static void register(){
         Register.index();
+    }
+
+    static User connected() {
+        String email = session.get("user");
+        if(email != null) {
+            System.out.println("valor de email" + email);
+            return User.find("byEmail", email).first();
+
+        }
+        return null;
+    }
+
+    public static void logOut(){
+        session.remove("user");
+        index();
     }
 
 }

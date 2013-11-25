@@ -1,0 +1,55 @@
+#{extends 'main_UserArea.html' /}
+#{set title:'E-learning - Exercices' /}
+
+
+#{set student: connected.isStudent}
+#{set tutor: connected.isTutor}
+#{set teacher: connected.isTeacher}
+
+<div id="content">
+<div id="content-header">
+    <div id="breadcrumb"> </div>
+    <h1>Exercices</h1>
+</div>
+<div class="container-fluid">
+<hr>
+<div class="row-fluid">
+<div class="span12">
+<div class="widget-box">
+    <div class="widget-title"> <span class="icon"> <i class="icon-th"></i> </span>
+        <h5>List of exercices</h5>
+    </div>
+    <div class="widget-content nopadding">
+        #{if connected.exercices}
+        <table class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th>Maximum Time</th>
+                <th>Maximum Mistakes</th>
+                <th>Description</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            #{list connected.exercices, as:'exercice'}
+                <tr class="odd gradeX">
+                    <td>${connected.exercice.maxTime}</td>
+                    <td>${connected.exercice.maxMistakes}</td>
+                    <td>${connected.exercice.description}</td>
+                    <td><a href="@{exercice(exercice.id)}" class="btn btn-primary btn-mini">Do it!</a></td>
+                </tr>
+            #{/list}
+            </tbody>
+        </table>
+        #{/if}
+
+        #{else}
+         You have no exercices to do.
+        #{/else}
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+</div>

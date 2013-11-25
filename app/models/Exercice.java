@@ -20,6 +20,9 @@ public class Exercice extends Model {
 	//@Lob
 	public String[] solution;
 
+    @ManyToMany
+    public List<User> users;
+
 	public Exercice(String identifier, String maxTime, String maxMistakes,
 			String[] formulation, String[] solution, String description) {
 
