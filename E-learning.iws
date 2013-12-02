@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e66391c6-e7bc-4032-afae-97d758c608a0" name="Default" comment="" />
+    <list default="true" id="e66391c6-e7bc-4032-afae-97d758c608a0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/E-learning.iws" afterPath="$PROJECT_DIR$/E-learning.iws" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/UserArea.java" afterPath="$PROJECT_DIR$/app/controllers/UserArea.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/UserArea/exercices.html" afterPath="$PROJECT_DIR$/app/views/UserArea/exercices.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/UserArea/index.html" afterPath="$PROJECT_DIR$/app/views/UserArea/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main_UserArea.html" afterPath="$PROJECT_DIR$/app/views/main_UserArea.html" />
+    </list>
     <ignored path="E-learning.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1385376802218" ignored="false" />
+    <file path="/Dummy.txt" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1385941298949" ignored="false" />
     <file path="/User.java" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1383431991425" ignored="false" />
     <file path="/BasicTest.java" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1382349429113" ignored="false" />
-    <file path="/index.html" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1383484013149" ignored="false" />
+    <file path="/index.html" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1385976583144" ignored="false" />
     <file path="/main.html" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1383312167085" ignored="false" />
     <file path="/Application.java" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1383484788365" ignored="false" />
     <file path="/routes" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1383319237841" ignored="false" />
     <file path="/login.html" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1383318611036" ignored="false" />
-    <file path="/UserArea.java" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1383483141675" ignored="false" />
-    <file path="/main_UserArea.html" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1383484654430" ignored="false" />
+    <file path="/UserArea.java" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1385976559997" ignored="false" />
+    <file path="/main_UserArea.html" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1385977005693" ignored="false" />
     <file path="/initdata.yml" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1383322196709" ignored="false" />
     <file path="/Register.java" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1383440873144" ignored="false" />
     <file path="/exercices.html" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1383488576558" ignored="false" />
@@ -81,8 +87,19 @@
       <file leaf-file-name="Application.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="55" selection-start="984" selection-end="984" vertical-scroll-proportion="0.0">
+            <state line="41" column="16" selection-start="843" selection-end="843" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Register.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/Register.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="0" selection-start="196" selection-end="196" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,7 +107,7 @@
       <file leaf-file-name="UserArea.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/UserArea.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="15" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
+            <state line="16" column="37" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -99,7 +116,7 @@
       <file leaf-file-name="exercices.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/UserArea/exercices.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="34" selection-start="178" selection-end="178" vertical-scroll-proportion="-0.625">
+            <state line="6" column="33" selection-start="173" selection-end="173" vertical-scroll-proportion="-3.75">
               <folding />
             </state>
           </provider>
@@ -115,27 +132,27 @@
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/UserArea/index.html">
+        <entry file="file://$PROJECT_DIR$/app/views/Register/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="32" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
+            <state line="96" column="107" selection-start="5778" selection-end="5778" vertical-scroll-proportion="-59.375">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main_UserArea.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/main_UserArea.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="0" selection-start="3097" selection-end="3097" vertical-scroll-proportion="0.5229682">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/Register/index.html">
+        <entry file="file://$PROJECT_DIR$/app/views/UserArea/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="107" selection-start="5778" selection-end="5778" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main_UserArea.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/main_UserArea.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="30" selection-start="3102" selection-end="3102" vertical-scroll-proportion="0.0">
+            <state line="3" column="0" selection-start="63" selection-end="160" vertical-scroll-proportion="-1.875">
               <folding />
             </state>
           </provider>
@@ -145,15 +162,6 @@
         <entry file="file://$PROJECT_DIR$/app/models/User.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="16" column="10" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/Application/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="35" selection-start="119" selection-end="119" vertical-scroll-proportion="0.10600707">
               <folding />
             </state>
           </provider>
@@ -185,14 +193,14 @@
         <option value="$PROJECT_DIR$/conf/initdata.yml" />
         <option value="$PROJECT_DIR$/app/models/User.java" />
         <option value="$PROJECT_DIR$/app/views/Register/index.html" />
-        <option value="$PROJECT_DIR$/app/views/UserArea/index.html" />
         <option value="$PROJECT_DIR$/app/models/Exercice.java" />
         <option value="$PROJECT_DIR$/app/controllers/Register.java" />
         <option value="$PROJECT_DIR$/app/views/Application/index.html" />
         <option value="$PROJECT_DIR$/app/controllers/Application.java" />
         <option value="$PROJECT_DIR$/app/controllers/UserArea.java" />
-        <option value="$PROJECT_DIR$/app/views/main_UserArea.html" />
+        <option value="$PROJECT_DIR$/app/views/UserArea/index.html" />
         <option value="$PROJECT_DIR$/app/views/UserArea/exercices.html" />
+        <option value="$PROJECT_DIR$/app/views/main_UserArea.html" />
       </list>
     </option>
   </component>
@@ -227,7 +235,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -520,6 +527,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -757,13 +765,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main_login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="58" selection-start="44" selection-end="74" vertical-scroll-proportion="0.07001167">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Applications/play-1.2.7/framework/src/play/mvc/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="106" column="35" selection-start="5495" selection-end="5495" vertical-scroll-proportion="-0.49048153" />
@@ -779,6 +780,27 @@
         <state line="289" column="28" selection-start="10452" selection-end="10452" vertical-scroll-proportion="0.36644593" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Exercice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="67" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/main_login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="43" selection-start="493" selection-end="493" vertical-scroll-proportion="0.17006803">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/Application/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="99" selection-start="59" selection-end="59" vertical-scroll-proportion="0.034013607">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="10" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
@@ -786,9 +808,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Exercice.java">
+    <entry file="file://$PROJECT_DIR$/app/controllers/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="67" selection-start="401" selection-end="401" vertical-scroll-proportion="0.0">
+        <state line="41" column="16" selection-start="843" selection-end="843" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -802,51 +824,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="55" selection-start="984" selection-end="984" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/UserArea.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="15" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/UserArea/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="32" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0">
+        <state line="16" column="37" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/Register/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="107" selection-start="5778" selection-end="5778" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main_UserArea.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="30" selection-start="3102" selection-end="3102" vertical-scroll-proportion="0.0">
+        <state line="96" column="107" selection-start="5778" selection-end="5778" vertical-scroll-proportion="-59.375">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/UserArea/exercices.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="34" selection-start="178" selection-end="178" vertical-scroll-proportion="-0.625">
+        <state line="6" column="33" selection-start="173" selection-end="173" vertical-scroll-proportion="-3.75">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/Application/index.html">
+    <entry file="file://$PROJECT_DIR$/app/views/UserArea/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="35" selection-start="119" selection-end="119" vertical-scroll-proportion="0.10600707">
+        <state line="3" column="0" selection-start="63" selection-end="160" vertical-scroll-proportion="-1.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/main_UserArea.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="0" selection-start="3097" selection-end="3097" vertical-scroll-proportion="0.5229682">
           <folding />
         </state>
       </provider>

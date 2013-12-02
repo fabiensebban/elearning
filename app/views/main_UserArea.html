@@ -59,7 +59,7 @@
 <div id="sidebar"> <a href="#" class="visible-phone"><i class="icon icon-file"></i> Addons</a>
     <ul>
         <li><a href="@{UserArea.index()}"><i class="icon icon-home"></i> <span>Dashboard</span></a> </li>
-        #{if ${get 'connected'}.isStudent}
+        #{if isStudent }
         <li><a href="@{UserArea.exercices()}"><i class="icon icon-briefcase"></i> <span>Exercices</span></a> </li>
         #{/if}
     </ul>

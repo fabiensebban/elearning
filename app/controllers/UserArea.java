@@ -13,7 +13,8 @@ public class UserArea extends Application {
     }
 
     public static void index() {
-        render();
+        User user = connected();
+        render(user);
     }
 
     public static void  exercices(){
