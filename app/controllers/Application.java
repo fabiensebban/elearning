@@ -42,7 +42,6 @@ public class Application extends Controller {
     static User connected() {
         String email = session.get("user");
         if(email != null) {
-            System.out.println("valor de email" + email);
             return User.find("byEmail", email).first();
 
         }

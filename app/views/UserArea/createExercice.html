@@ -1,0 +1,75 @@
+#{extends 'main_UserArea.html' /}
+#{set title:'E-learning - Create Exercices' /}
+
+
+#{set isStudent: user.isStudent/}
+#{set isTutor: user.isTutor/}
+#{set isTeacher: user.isTeacher/}
+
+<div id="content">
+    <div id="content-header">
+        <div id="breadcrumb"></div>
+        <h1>Create Exercice</h1>
+    </div>
+    <div class="container-fluid"><hr>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title"> <span class="icon"> <i class="icon-info-sign"></i> </span>
+                        <h5>Exercice specifications</h5>
+                    </div>
+                    <div class="widget-content nopadding">
+                        <form enctype="application/x-www-form-urlencoded" accept-charset="utf-8" class="form-horizontal" action="/userarea/saveexercice" method="post" name="basic_validate" id="basic_validate">
+                            <div class="control-group">
+                                <label class="control-label">Description :</label>
+                                <div class="controls">
+                                    <input type="text" name="description" id="description" value="${params.description}" class="span11">
+                                    <span class="help-inline" generated="true" for="description">#{error 'description' /}</span>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Maximum mistakes :</label>
+                                <div class="controls">
+                                    <input type="text" name="maxMistakes" id="maxMistakes" value="${params.maxMistakes}" class="span11">
+                                    <span class="help-inline" generated="true" for="maxMistakes">#{error 'maxMistakes' /}</span>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Maximum spended time :</label>
+                                <div class="controls">
+                                    <input type="text" name="maxTime" id="maxTime" value="${params.maxTime}" class="span11">
+                                    <span class=help-block>Time in minutes</span>
+                                    <span class="help-inline" generated="true" for="maxTime">#{error 'maxTime' /}</span>
+                                </div>
+                            </div>
+                            #{list formuls, as:'formul'}
+                            <div class="control-group">
+                                <label class="control-label">Formulation ${formul +1} :</label>
+                                <div class="controls">
+                                    <textarea class="span11" name="formulation${formul}"></textarea>
+                                    <span class="help-inline" generated="true" for="formulation${formul}">#{error 'formulation' /}</span>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Solution ${formul +1} :</label>
+                                <div class="controls">
+                                    <textarea class="span11" name="solution${formul}"></textarea>
+                                    <span class="help-inline" generated="true" for="solution${formul}">#{error 'solution' /}</span>
+                                </div>
+                            </div>
+                            #{/list}
+                            <div class="form-actions">
+                                <input type="submit" value="Save" class="btn btn-success">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $('.textarea_editor').wysihtml5();
+</script>

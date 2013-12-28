@@ -16,11 +16,39 @@
 <div class="row-fluid">
 <div class="span12">
 <div class="widget-box">
-    <div class="widget-title"> <span class="icon"> <i class="icon-th"></i> </span>
+    <div class="widget-title">
+        <span class="icon"> <i class="icon-th"></i> </span>
         <h5>List of exercices</h5>
+        #{if user.isTutor}
+        <div class="buttons">
+            <a id="add-event" data-toggle="modal" href="@{UserArea.createExercice()}" class="btn btn-success btn-mini">
+                <i class="icon-plus icon-white"></i>
+                Create exercice
+            </a>
+
+
+
+            #{form @userArea.createExercice()}
+                <a id="add-event" data-toggle="modal" href="#modal-add-event" class="btn btn-inverse btn-mini"> <i class="icon-plus icon-white"></i>Create exercice</a>
+                <div class="modal hide" id="modal-add-event">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h3>Formulations</h3>
+                    </div>
+                    <div class="modal-body">
+                        <p>How many formulation will have your exercice:</p>
+                        <p>
+                            <input id="event-name" name="formulations" type="text" />
+                        </p>
+                    </div>
+                    <div class="modal-footer"> <a href="#" class="btn" data-dismiss="modal">Cancel</a> <input type="submit" id="add-event-submit" class="btn btn-primary" value="Create exercice"/></div>
+                </div>
+            </div>
+        #{/form}
+        #{/if}
     </div>
     <div class="widget-content nopadding">
-        #{if connected.exercices}
+        #{if user.exercices}
         <table class="table table-bordered table-striped">
             <thead>
             <tr>
@@ -33,9 +61,9 @@
             <tbody>
             #{list connected.exercices, as:'exercice'}
                 <tr class="odd gradeX">
-                    <td>${connected.exercice.maxTime}</td>
-                    <td>${connected.exercice.maxMistakes}</td>
-                    <td>${connected.exercice.description}</td>
+                    <td>${user.exercice.maxTime}</td>
+                    <td>${user.exercice.maxMistakes}</td>
+                    <td>${user.exercice.description}</td>
                     <td><a href="@{exercice(exercice.id)}" class="btn btn-primary btn-mini">Do it!</a></td>
                 </tr>
             #{/list}
@@ -53,3 +81,12 @@
 </div>
 </div>
 </div>
+
+        <!--
+<script type="text/javascript">
+    $(document).ready(function(){
+       alert("ça marche");
+    });
+</script>
+
+                -->

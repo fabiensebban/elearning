@@ -15,16 +15,17 @@ public class Exercice extends Model {
 	public boolean done; 
 	public String time;
 	public String mistakes;
-	//@Lob
+    public String createdBy;
+
+    //@Lob
 	public String[] formulation;
 	//@Lob
 	public String[] solution;
-
     @ManyToMany
     public List<User> users;
 
 	public Exercice(String identifier, String maxTime, String maxMistakes,
-			String[] formulation, String[] solution, String description) {
+			String[] formulation, String[] solution, String description, String CreaatedBy) {
 
 		this.identifier = identifier;
 		this.maxTime = maxTime;
@@ -35,7 +36,8 @@ public class Exercice extends Model {
 		this.done = false;
 		this.time = "0";
 		this.mistakes = "0";
-		
+        this.createdBy = createdBy;
+
 	}
 
 }

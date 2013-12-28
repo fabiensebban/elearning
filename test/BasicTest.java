@@ -56,7 +56,7 @@ public class BasicTest extends UnitTest {
         String identifier = java.util.UUID.randomUUID().toString();
         String[] formulation = {"formulation1", "formulation2", "formulation3"};
         String[] solution = {"solution1", "solution2", "solution3"};
-        new Exercice(identifier, "300", "5", formulation, solution, "description").save();
+        new Exercice(identifier, "300", "5", formulation, solution, "description", "creator@exercice.com").save();
 
 
         // Retrieve the exercice with the identifier
@@ -73,6 +73,7 @@ public class BasicTest extends UnitTest {
         assertEquals("formulation3", ex.formulation[2]);
         assertEquals("solution3", ex.solution[2]);
         assertEquals("description", ex.description);
+        assertEquals("creator@exercice.com", ex.createdBy);
 
     }
 
@@ -84,12 +85,12 @@ public class BasicTest extends UnitTest {
         String identifier = java.util.UUID.randomUUID().toString();
         String[] formulation = {"formulation1", "formulation2", "formulation3"};
         String[] solution = {"solution1", "solution2", "solution3"};
-        new Exercice(identifier, "300", "5", formulation, solution, "description").save();
+        new Exercice(identifier, "300", "5", formulation, solution, "description", "creator@exercice.com").save();
 
         String identifier1 = java.util.UUID.randomUUID().toString();
         String[] formulation1 = {"formulation1.1", "formulation1.2", "formulation1.3"};
         String[] solution1 = {"solution1.1", "solution1.2", "solution1.3"};
-        new Exercice(identifier1, "354", "3", formulation1, solution1, "description1").save();
+        new Exercice(identifier1, "354", "3", formulation1, solution1, "description1", "creator@exercice.com").save();
 
 
         //STUDENT
