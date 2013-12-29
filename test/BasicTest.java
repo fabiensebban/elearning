@@ -78,7 +78,7 @@ public class BasicTest extends UnitTest {
     }
 
     @Test
-    public void AssociateExercicesToStudent() {
+    public void AssociateExercicesToStudents() {
 
         //EXERCICE
         // Create new exercices and save them
@@ -94,7 +94,7 @@ public class BasicTest extends UnitTest {
 
 
         //STUDENT
-        // Create a new student and save it
+        // Create tow new students and save them
         new User("fa.sebban@gmail.com", "pass", "Fabian Sebban", "15/08/1991", "m", true, false, false).save();
 
         // Retrieve the student with e-mail address fa.sebban@gmail.com

@@ -56,6 +56,17 @@ public class UserArea extends Application {
         validation.required(params.get("maxMistakes"));
         validation.required(params.get("maxTime"));
 
+        try{
+
+            Integer.parseInt(params.get("maxMistakes"));
+            Integer.parseInt(params.get("maxTime"));
+
+        }
+        catch (Exception e){
+
+            validation.equals(1,2);
+        }
+
         String identifier = java.util.UUID.randomUUID().toString();
         int cnt = 0;
 
@@ -92,8 +103,7 @@ public class UserArea extends Application {
         if(validation.hasErrors()) {
 
             exercice.deleteAll();
-            System.out.println("exercice " +exercice.description);
-            //UserArea.createExercice(""+cnt+"");
+            System.out.println("Error de "+connected().fullname+"al guardar el ejercicio");
             render("@createExercice",user, formuls);
         }
 
@@ -101,6 +111,21 @@ public class UserArea extends Application {
             exercice.save();
             exercices();
         }
+    }
+
+    public static void doExecice(String id){
+
+
+
+    }
+
+    public static void editExecice(String id){
+
+        //finding the exercice...
+       Exercice exercie = Exercice.find("byId", id).first();
+       //...and rendering it
+       render(exercie);
+
     }
 }
 

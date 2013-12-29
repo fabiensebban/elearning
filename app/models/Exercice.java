@@ -3,29 +3,34 @@ package models;
 import java.util.*;
 import javax.persistence.*;
 
+import play.data.validation.Required;
 import play.db.jpa.*;
 
 @Entity
 public class Exercice extends Model {
 
+    @Required
 	public String identifier;
+    @Required
 	public String maxTime;
+    @Required
 	public String maxMistakes;
+    @Required
 	public String description;
 	public boolean done; 
 	public String time;
 	public String mistakes;
     public String createdBy;
 
-    //@Lob
+    @Required
 	public String[] formulation;
-	//@Lob
+    @Required
 	public String[] solution;
     @ManyToMany
     public List<User> users;
 
 	public Exercice(String identifier, String maxTime, String maxMistakes,
-			String[] formulation, String[] solution, String description, String CreaatedBy) {
+			String[] formulation, String[] solution, String description, String createdBy) {
 
 		this.identifier = identifier;
 		this.maxTime = maxTime;
