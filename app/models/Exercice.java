@@ -21,7 +21,8 @@ public class Exercice extends Model {
 	public String time;
 	public String mistakes;
     public String createdBy;
-
+    public Date creationDate;
+    public boolean deleted;
     @Required
 	public String[] formulation;
     @Required
@@ -42,7 +43,8 @@ public class Exercice extends Model {
 		this.time = "0";
 		this.mistakes = "0";
         this.createdBy = createdBy;
-
+        this.deleted = false;
+        this.creationDate = Calendar.getInstance().getTime();
 	}
 
 }

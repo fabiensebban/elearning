@@ -5,6 +5,7 @@ import play.mvc.*;
 import java.util.*;
 import models.*;
 import play.data.validation.*;
+import java.util.ArrayList;
 
 public class UserArea extends Application {
 
@@ -20,6 +21,15 @@ public class UserArea extends Application {
 
     public static void  exercices(){
         User user = connected();
+
+        if(user.isTeacher){
+
+            //We render only the exercice which has flase as deleted atribute
+            List<Exercice> created_exercices = Exercice.find(
+                    "select e from Exercice e where e.deleted = false and e.createdBy like ?", user.email).fetch();
+
+            render(user,created_exercices);
+        }
         render(user);
     }
 
@@ -31,6 +41,9 @@ public class UserArea extends Application {
         try{
             f = Integer.parseInt(formulations);
 
+            if(f==0)
+            {UserArea.exercices();}
+
             int i = 0;
             List<Integer> formuls = new ArrayList<Integer>();
 
@@ -40,7 +53,7 @@ public class UserArea extends Application {
                 i++;
 
             }
-            render(user, formuls);
+            render(user, formuls, formulations);
         }
         catch (Exception e){
             UserArea.exercices();
@@ -81,9 +94,6 @@ public class UserArea extends Application {
         String [] formulation = new String[cnt];
         String [] solution = new String[cnt];
 
-        Exercice exercice = new Exercice(identifier, params.get("maxTime"), params.get("maxMistakes"),
-                formulation, solution, params.get("description"), user.email);
-
         int i = 0;
 
         //Put all formulations and solutions in an string array for be save in the database afterwards
@@ -99,33 +109,95 @@ public class UserArea extends Application {
 
         }
 
+        Exercice exercice = new Exercice(identifier, params.get("maxTime"), params.get("maxMistakes"),
+                formulation, solution, params.get("description"), user.email);
+
+
         // Handle errors
         if(validation.hasErrors()) {
 
-            exercice.deleteAll();
-            System.out.println("Error de "+connected().fullname+"al guardar el ejercicio");
+            exercice.delete();
+            System.out.println("Error de "+connected().fullname+" al guardar el ejercicio");
             render("@createExercice",user, formuls);
         }
 
         else{
             exercice.save();
+
+            //Everytime someone creates an exercice, we put it in admin's list.
+            User admin = User.find("byEmail", "demo_tutor").first();
+            admin.addExercice("demo_tutor", identifier);
+
             exercices();
         }
     }
 
     public static void doExecice(String id){
 
+    }
 
+    public static void editExercice(Long id) {
+
+        User user = connected();
+
+        //finding the exercice...
+        Exercice exercice = Exercice.findById(id);
+
+        //...ordering the formulations and solutions...
+
+        int i=0;
+        boolean continu = true;
+
+        List<String> formulations = new ArrayList<String>();
+        List<String> solutions = new ArrayList<String>();
+        while (continu){
+
+            try{
+
+                formulations.add(exercice.formulation[i]);
+                solutions.add(exercice.solution[i]);
+                i++;
+            }
+
+            catch (Exception e){
+
+                continu = false;
+
+            }
+        }
+
+        //...and render it
+        render(user, exercice, formulations, solutions);
 
     }
 
-    public static void editExecice(String id){
+    public static void deleteExercice(Long id){
 
-        //finding the exercice...
-       Exercice exercie = Exercice.find("byId", id).first();
-       //...and rendering it
-       render(exercie);
+        Exercice exercice = Exercice.findById(id);
+        exercice.deleted = true;
+        exercice.save();
+        UserArea.exercices();
+    }
 
+    public static void studentList(){
+
+        User user = connected();
+
+        List<User> students = new ArrayList<User>();
+        boolean continu = true;
+        int i=0;
+
+        while (continu) {
+
+            try{
+                User student = User.find("byEmail",user.list_students_email.get(i)).first();
+                students.add(student);
+            }
+            catch (Exception e){
+                continu = false;
+
+            }
+        }
     }
 }
 

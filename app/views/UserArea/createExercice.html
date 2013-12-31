@@ -24,6 +24,7 @@
                         #{/ifErrors}
 
                         <form enctype="application/x-www-form-urlencoded" accept-charset="utf-8" class="form-horizontal" action="/userarea/saveexercice" method="post" name="basic_validate" id="basic_validate">
+                            <input name="questionsNumber" type="hidden" value="${formulations}">
                             <div class="control-group">
                                 <label class="control-label">Description :</label>
                                 <div class="controls">
@@ -64,6 +65,7 @@
                             #{/list}
                             <div class="form-actions">
                                 <input type="submit" value="Save" class="btn btn-success">
+                                <input type="hidden" name="edit" value="no">
                             </div>
                         </form>
                     </div>

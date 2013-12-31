@@ -62,8 +62,10 @@
         #{if isStudent}
         <li><a href="@{UserArea.exercices()}"><i class="icon icon-briefcase"></i> <span>Exercices</span></a> </li>
         #{/if}
-        #{if isTutor}
+        #{if isTeacher}
         <li><a href="@{UserArea.exercices()}"><i class="icon icon-th-list"></i> <span>Created Exercices</span></a> </li>
+        <li><a href="@{UserArea.studentList()}"><i class="icon icon-th-list"></i> <span>My students</span></a> </li>
+
         #{/if}
     </ul>
 </div>

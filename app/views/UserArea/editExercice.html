@@ -23,43 +23,49 @@
                             <div class="control-group">
                                 <label class="control-label">Description :</label>
                                 <div class="controls">
-                                    <input type="text" name="description" id="description" value="${params.description}" class="span11">
+                                    <input type="text" name="description" id="description" value="${exercice.description}" class="span11">
                                     <span class="help-inline" generated="true" for="description">#{error 'description' /}</span>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Maximum mistakes :</label>
                                 <div class="controls">
-                                    <input type="text" name="maxMistakes" id="maxMistakes" value="${params.maxMistakes}" class="span11">
+                                    <input type="text" name="maxMistakes" id="maxMistakes" value="${exercice.maxMistakes}" class="span11">
                                     <span class="help-inline" generated="true" for="maxMistakes">#{error 'maxMistakes' /}</span>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Maximum spended time :</label>
                                 <div class="controls">
-                                    <input type="text" name="maxTime" id="maxTime" value="${params.maxTime}" class="span11">
+                                    <input type="text" name="maxTime" id="maxTime" value="${exercice.maxTime}" class="span11">
                                     <span class=help-block>Time in minutes</span>
                                     <span class="help-inline" generated="true" for="maxTime">#{error 'maxTime' /}</span>
                                 </div>
                             </div>
-                            #{list formuls, as:'formul'}
+                            #{list formulations, as:'formulation'}
+
                             <div class="control-group">
-                                <label class="control-label">Formulation ${formul +1} :</label>
+                                <label class="control-label">Formulation ${formulation_index} :</label>
                                 <div class="controls">
-                                    <textarea class="span11" name="formulation${formul}"></textarea>
-                                    <span class="help-inline" generated="true" for="formulation${formul}">#{error 'formulation' /}</span>
+                                    <textarea class="span11" name="formulation${formulation_index - 1}">${formulation}</textarea>
+                                    <span class="help-inline" generated="true" for="formulation${formulation_index - 1}">#{error 'formulation' /}</span>
                                 </div>
                             </div>
+
+                            #{/list}
+
+                            #{list solutions, as:'solution'}
                             <div class="control-group">
-                                <label class="control-label">Solution ${formul +1} :</label>
+                                <label class="control-label">Solution ${solution_index} :</label>
                                 <div class="controls">
-                                    <textarea class="span11" name="solution${formul}"></textarea>
-                                    <span class="help-inline" generated="true" for="solution${formul}">#{error 'solution' /}</span>
+                                    <textarea class="span11" name="solution${solution_index - 1}">${solution}</textarea>
+                                    <span class="help-inline" generated="true" for="solution${solution_index - 1}">#{error 'solution' /}</span>
                                 </div>
                             </div>
                             #{/list}
                             <div class="form-actions">
                                 <input type="submit" value="Save" class="btn btn-success">
+                                <input type="hidden" name="edit" value="yes">
                             </div>
                         </form>
                     </div>

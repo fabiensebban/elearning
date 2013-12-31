@@ -19,7 +19,7 @@
     <div class="widget-title">
         <span class="icon"> <i class="icon-th"></i> </span>
         <h5>List of exercices</h5>
-        #{if user.isTutor}
+        #{if user.isTeacher}
         <div class="buttons">
             #{form @userArea.createExercice()}
                 <a id="add-event" data-toggle="modal" href="#modal-add-event" class="btn btn-success btn-mini"> <i class="icon-plus icon-white"></i>Create exercice</a>
@@ -46,18 +46,20 @@
             <table class="table table-bordered table-striped">
                 <thead>
                 <tr>
+                    <th>Description</th>
                     <th>Maximum Time</th>
                     <th>Maximum Mistakes</th>
-                    <th>Description</th>
+                    <th>Creation Date</th>
                     <th></th>
                 </tr>
                 </thead>
                 <tbody>
                 #{list connected.exercices, as:'exercice'}
                     <tr class="odd gradeX">
+                        <td>${user.exercice.description}</td>
                         <td>${user.exercice.maxTime}</td>
                         <td>${user.exercice.maxMistakes}</td>
-                        <td>${user.exercice.description}</td>
+                        <td>${user.exercice.creationDate.format('dd/MM/yyyy hh:mm:ss', '24')}}</td>
                         <td><a href="@{exercice(exercice.id)}" class="btn btn-primary btn-mini">Do it!</a></td>
                     </tr>
                 #{/list}
@@ -71,24 +73,26 @@
 
         #{/if}
 
-        #{if user.isTutor}
-            #{if user.exercices}
+        #{if user.isTeacher}
+            #{if created_exercices}
             <table class="table table-bordered table-striped">
                 <thead>
                 <tr>
+                    <th>Description</th>
                     <th>Maximum Time</th>
                     <th>Maximum Mistakes</th>
-                    <th>Description</th>
+                    <th>Creation Date</th>
                     <th></th>
                 </tr>
                 </thead>
                 <tbody>
-                #{list connected.exercices, as:'exercice'}
+                #{list created_exercices, as:'exercice'}
                 <tr class="odd gradeX">
-                    <td>${user.exercice.maxTime}</td>
-                    <td>${user.exercice.maxMistakes}</td>
-                    <td>${user.exercice.description}</td>
-                    <td><a href="@{editExercice(exercice.id)}" class="btn btn-primary btn-mini">Edit</a></td>
+                    <td>${exercice.description}</td>
+                    <td>${exercice.maxTime}</td>
+                    <td>${exercice.maxMistakes}</td>
+                    <td>${exercice.creationDate.format('dd/MM/yyyy HH:mm:ss')}</td>
+                    <td><a href="@{editExercice(exercice.id)}" class="btn btn-primary btn-mini">Edit</a> <a href="@{deleteExercice(exercice.id)}" class="btn btn-danger btn-mini">Delete</a></td>
                 </tr>
                 #{/list}
                 </tbody>
