@@ -37,6 +37,8 @@ public class User extends Model{
     //Info about students
     public String course;
 
+    public int totalExercicesDone;
+
     @Column
     @ElementCollection(targetClass=String.class)
     public List<String> list_students_email;
@@ -68,6 +70,7 @@ public class User extends Model{
         this.list_teachers_email = new ArrayList<String>();
         this.workplace = null;
         this.course = null;
+        this.totalExercicesDone = 0;
 
     }
 
@@ -79,11 +82,17 @@ public class User extends Model{
 
         User teacher = User.find("byEmail", email_teacher).first();
         User student = User.find("byEmail", email_student).first();
-        teacher.list_students_email.add(email_student);
-        teacher.save();
-        student.list_teachers_email.add(email_teacher);
-        student.save();
-        return (teacher); //need to be changed when i'll implement sessions.
+
+        if(student != null){
+            teacher.list_students_email.add(email_student);
+            teacher.save();
+            student.list_teachers_email.add(email_teacher);
+            student.save();
+            return (teacher); //need to be changed when i'll implement sessions.
+        }
+        else{
+            return (null);
+        }
     }
 
     public User assignStudentToTutor(String email_student, String email_tutor){

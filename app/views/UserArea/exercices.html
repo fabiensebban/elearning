@@ -92,7 +92,40 @@
                     <td>${exercice.maxTime}</td>
                     <td>${exercice.maxMistakes}</td>
                     <td>${exercice.creationDate.format('dd/MM/yyyy HH:mm:ss')}</td>
-                    <td><a href="@{editExercice(exercice.id)}" class="btn btn-primary btn-mini">Edit</a> <a href="@{deleteExercice(exercice.id)}" class="btn btn-danger btn-mini">Delete</a></td>
+                    <td>
+                        <a href="@{editExercice(exercice.id)}" class="btn btn-primary btn-mini">Edit</a>
+                        <a href="@{deleteExercice(exercice.id)}" class="btn btn-danger btn-mini">Delete</a>
+                            #{form @userArea.assignExerciceToStudent()}
+                            <a id="assign-event" data-toggle="modal" href="#assign" class="btn btn-success btn-mini"> <i class="icon-plus icon-white"></i>Assign to student</a>
+                            <div class="modal hide" id="assign">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">×</button>
+                                    <h3>Assign exercice</h3>
+                                    <input type="hidden" name="idExercice" value="${exercice.id}">
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                            <table class="table table-bordered table-striped">
+                                                <thead>
+                                                <tr>
+                                                    <th>Student List</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                #{list students, as:'student'}
+                                                <tr class="odd gradex">
+                                                    <td><input type="checkbox" value="${student.email}" name="selectedStudents" id="selectedStudents" />   ${student.fullname}</td>
+                                                </tr>
+                                                #{/list}
+                                                </tbody>
+                                            </table>
+
+                                    </p>
+                                </div>
+                                <div class="modal-footer"> <a href="#" class="btn" data-dismiss="modal">Cancel</a> <input type="submit" id="add-event-submit" class="btn btn-primary" value="Add"/></div>
+                            </div>
+                        #{/form}
+                    </td>
                 </tr>
                 #{/list}
                 </tbody>

@@ -23,6 +23,7 @@ public class Exercice extends Model {
     public String createdBy;
     public Date creationDate;
     public boolean deleted;
+    public boolean copied;
     @Required
 	public String[] formulation;
     @Required
@@ -45,6 +46,7 @@ public class Exercice extends Model {
         this.createdBy = createdBy;
         this.deleted = false;
         this.creationDate = Calendar.getInstance().getTime();
+        this.copied = false;
 	}
 
 }

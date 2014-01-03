@@ -2,16 +2,19 @@ package controllers;
 
 import play.*;
 import play.mvc.*;
+
 import java.util.*;
+
 import models.*;
 import play.data.validation.*;
+
 import java.util.ArrayList;
 
 public class UserArea extends Application {
 
     @Before
     static void checkAuthentification() {
-        if(session.get("user") == null) Application.index();
+        if (session.get("user") == null) Application.index();
     }
 
     public static void index() {
@@ -19,48 +22,57 @@ public class UserArea extends Application {
         render(user);
     }
 
-    public static void  exercices(){
+    public static void exercices() {
         User user = connected();
 
-        if(user.isTeacher){
+        if (user.isTeacher) {
 
             //We render only the exercice which has flase as deleted atribute
             List<Exercice> created_exercices = Exercice.find(
-                    "select e from Exercice e where e.deleted = false and e.createdBy like ?", user.email).fetch();
+                    "select e from Exercice e where e.deleted = false and e.copied = false and e.createdBy like ?", user.email).fetch();
+            List<User> students = new ArrayList<User>();
+            int i = 0;
+            while (i < user.list_students_email.size()) {
 
-            render(user,created_exercices);
+                String studentEmail = user.list_students_email.get(i);
+                User student = User.find("byEmail", studentEmail).first();
+                students.add(student);
+                i++;
+
+            }
+            render(user, created_exercices, students);
         }
         render(user);
     }
 
-    public static void createExercice(String formulations){
+    public static void createExercice(String formulations) {
 
         int f = 0;
         User user = connected();
 
-        try{
+        try {
             f = Integer.parseInt(formulations);
 
-            if(f==0)
-            {UserArea.exercices();}
+            if (f == 0) {
+                UserArea.exercices();
+            }
 
             int i = 0;
             List<Integer> formuls = new ArrayList<Integer>();
 
-            while (i < f){
+            while (i < f) {
 
                 formuls.add(i);
                 i++;
 
             }
             render(user, formuls, formulations);
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             UserArea.exercices();
         }
     }
 
-    public static void saveExercice(){
+    public static void saveExercice() {
 
         User user = connected();
 
@@ -69,15 +81,14 @@ public class UserArea extends Application {
         validation.required(params.get("maxMistakes"));
         validation.required(params.get("maxTime"));
 
-        try{
+        try {
 
             Integer.parseInt(params.get("maxMistakes"));
             Integer.parseInt(params.get("maxTime"));
 
-        }
-        catch (Exception e){
+        } catch (Exception e) {
 
-            validation.equals(1,2);
+            validation.equals(1, 2);
         }
 
         String identifier = java.util.UUID.randomUUID().toString();
@@ -85,26 +96,26 @@ public class UserArea extends Application {
 
         List<Integer> formuls = new ArrayList<Integer>();
         //This while counts how many formulation the tutor wants in his exercice.
-        while(params.get("solution"+cnt) != null){
+        while (params.get("solution" + cnt) != null) {
             formuls.add(cnt);
             cnt++;
 
         }
 
-        String [] formulation = new String[cnt];
-        String [] solution = new String[cnt];
+        String[] formulation = new String[cnt];
+        String[] solution = new String[cnt];
 
         int i = 0;
 
         //Put all formulations and solutions in an string array for be save in the database afterwards
-        while(params.get("solution"+i) != null){
+        while (params.get("solution" + i) != null) {
 
             //validation rules
-            validation.required(params.get("formulation"+i));
-            validation.required(params.get("solution")+i);
+            validation.required(params.get("formulation" + i));
+            validation.required(params.get("solution") + i);
 
-            formulation[i] = params.get("formulation"+i);
-            solution[i] = params.get("solution"+i);
+            formulation[i] = params.get("formulation" + i);
+            solution[i] = params.get("solution" + i);
             i++;
 
         }
@@ -114,14 +125,12 @@ public class UserArea extends Application {
 
 
         // Handle errors
-        if(validation.hasErrors()) {
+        if (validation.hasErrors()) {
 
             exercice.delete();
-            System.out.println("Error de "+connected().fullname+" al guardar el ejercicio");
-            render("@createExercice",user, formuls);
-        }
-
-        else{
+            System.out.println("Error de " + connected().fullname + " al guardar el ejercicio");
+            render("@createExercice", user, formuls);
+        } else {
             exercice.save();
 
             //Everytime someone creates an exercice, we put it in admin's list.
@@ -132,7 +141,7 @@ public class UserArea extends Application {
         }
     }
 
-    public static void doExecice(String id){
+    public static void doExecice(String id) {
 
     }
 
@@ -145,21 +154,19 @@ public class UserArea extends Application {
 
         //...ordering the formulations and solutions...
 
-        int i=0;
+        int i = 0;
         boolean continu = true;
 
         List<String> formulations = new ArrayList<String>();
         List<String> solutions = new ArrayList<String>();
-        while (continu){
+        while (continu) {
 
-            try{
+            try {
 
                 formulations.add(exercice.formulation[i]);
                 solutions.add(exercice.solution[i]);
                 i++;
-            }
-
-            catch (Exception e){
+            } catch (Exception e) {
 
                 continu = false;
 
@@ -171,7 +178,7 @@ public class UserArea extends Application {
 
     }
 
-    public static void deleteExercice(Long id){
+    public static void deleteExercice(Long id) {
 
         Exercice exercice = Exercice.findById(id);
         exercice.deleted = true;
@@ -179,25 +186,52 @@ public class UserArea extends Application {
         UserArea.exercices();
     }
 
-    public static void studentList(){
+    public static void studentList() {
 
         User user = connected();
 
         List<User> students = new ArrayList<User>();
-        boolean continu = true;
-        int i=0;
+        int i = 0;
 
-        while (continu) {
+        while (i < user.list_students_email.size()) {
 
-            try{
-                User student = User.find("byEmail",user.list_students_email.get(i)).first();
-                students.add(student);
-            }
-            catch (Exception e){
-                continu = false;
+            User student = User.find("byEmail", user.list_students_email.get(i)).first();
+            students.add(student);
+            i++;
 
-            }
         }
+
+        render(user, students);
+
+    }
+
+    public static void addStudent(String studentEmail) {
+
+        connected().assignStudentToTeacher(studentEmail, connected().email);
+        UserArea.studentList();
+    }
+
+    public static void assignExerciceToStudent(Long idExercice, List<String> selectedStudents) {
+
+        int i = 0;
+
+        while (i < selectedStudents.size()) {
+
+            User student = User.find("byEmail", selectedStudents.get(i)).first();
+            Exercice exercice = Exercice.findById(idExercice);
+
+            //we copie the exercice for asssign it to a student.
+            String identifier = java.util.UUID.randomUUID().toString();
+            Exercice copied_exercice = new Exercice(identifier, exercice.maxTime, exercice.maxMistakes,
+                    exercice.formulation, exercice.solution, exercice.description, exercice.createdBy);
+            copied_exercice.copied = true;
+            copied_exercice.save();
+            student.addExercice(student.email, copied_exercice.identifier);
+            student.save();
+            i++;
+        }
+
+        UserArea.exercices();
     }
 }
 

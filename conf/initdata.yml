@@ -28,6 +28,7 @@ models.User(demo_student):
     fullname:       Demo Student
     DateOfBirth: 15/05/1991
     sex:     m
+    course:  4ESO
     DateOfRegistration:  01/11/2013
     isTutor:   false
     isStudent:  true
