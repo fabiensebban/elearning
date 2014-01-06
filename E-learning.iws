@@ -6,29 +6,34 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/Exercice.java" afterPath="$PROJECT_DIR$/app/models/Exercice.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/User.java" afterPath="$PROJECT_DIR$/app/models/User.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/UserArea.java" afterPath="$PROJECT_DIR$/app/controllers/UserArea.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/js/bootstrap-wysihtml5.js" afterPath="$PROJECT_DIR$/public/javascripts/js/bootstrap-wysihtml5.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/UserArea/doExercice.html" afterPath="$PROJECT_DIR$/app/views/UserArea/doExercice.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/UserArea/editExercice.html" afterPath="$PROJECT_DIR$/app/views/UserArea/editExercice.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/UserArea/exercices.html" afterPath="$PROJECT_DIR$/app/views/UserArea/exercices.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/initdata.yml" afterPath="$PROJECT_DIR$/conf/initdata.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main_UserArea.html" afterPath="$PROJECT_DIR$/app/views/main_UserArea.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/UserArea/studentList.html" afterPath="$PROJECT_DIR$/app/views/UserArea/studentList.html" />
     </list>
     <ignored path="E-learning.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1388691625693" ignored="false" />
-    <file path="/User.java" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1388711821041" ignored="false" />
+    <file path="/Dummy.txt" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1388765741546" ignored="false" />
+    <file path="/User.java" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1388778758139" ignored="false" />
     <file path="/BasicTest.java" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1388328595405" ignored="false" />
     <file path="/index.html" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1385976583144" ignored="false" />
     <file path="/main.html" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1383312167085" ignored="false" />
     <file path="/Application.java" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1383484788365" ignored="false" />
     <file path="/routes" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1383319237841" ignored="false" />
     <file path="/login.html" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1383318611036" ignored="false" />
-    <file path="/UserArea.java" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1388747952621" ignored="false" />
-    <file path="/main_UserArea.html" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1388602368269" ignored="false" />
+    <file path="/UserArea.java" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1389039350673" ignored="false" />
+    <file path="/main_UserArea.html" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1388846614822" ignored="false" />
     <file path="/initdata.yml" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1388602661695" ignored="false" />
     <file path="/Register.java" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1388259575845" ignored="false" />
-    <file path="/exercices.html" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1388747740502" ignored="false" />
-    <file path="/Exercice.java" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1388747936184" ignored="false" />
+    <file path="/exercices.html" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1389039452096" ignored="false" />
+    <file path="/Exercice.java" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1388778927463" ignored="false" />
     <file path="/createExercice.html" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1388488984122" ignored="false" />
-    <file path="/editExercice.html" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1388488041452" ignored="false" />
-    <file path="/studentList.html" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1388602286545" ignored="false" />
+    <file path="/editExercice.html" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1388849098205" ignored="false" />
+    <file path="/studentList.html" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1388849076233" ignored="false" />
+    <file path="/assignedExercices.html" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1388887037547" ignored="false" />
+    <file path="/doExercice.html" changelist="e66391c6-e7bc-4032-afae-97d758c608a0" time="1389037975698" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +48,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -79,7 +85,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -92,16 +97,7 @@
       <file leaf-file-name="main_UserArea.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/main_UserArea.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="68" selection-start="3439" selection-end="3439" vertical-scroll-proportion="-0.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BasicTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/BasicTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="22" selection-start="1877" selection-end="1877" vertical-scroll-proportion="0.0">
+            <state line="29" column="122" selection-start="1466" selection-end="1466" vertical-scroll-proportion="-18.125">
               <folding />
             </state>
           </provider>
@@ -110,16 +106,27 @@
       <file leaf-file-name="UserArea.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/UserArea.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="73" selection-start="734" selection-end="734" vertical-scroll-proportion="-0.032967035">
+            <state line="282" column="7" selection-start="7751" selection-end="7751" vertical-scroll-proportion="0.16572078">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#845#851#0" expanded="true" />
-                <element signature="e#1581#1590#0" expanded="true" />
-                <element signature="e#2433#2442#0" expanded="true" />
-                <element signature="e#4321#4329#0" expanded="true" />
-                <element signature="e#4379#4387#0" expanded="true" />
-                <element signature="e#5071#5077#0" expanded="true" />
+                <element signature="e#978#984#0" expanded="true" />
+                <element signature="e#1426#1436#0" expanded="true" />
+                <element signature="e#2140#2149#0" expanded="true" />
+                <element signature="e#2992#3001#0" expanded="true" />
+                <element signature="e#4725#4733#0" expanded="true" />
+                <element signature="e#5281#5289#0" expanded="true" />
+                <element signature="e#5339#5347#0" expanded="true" />
+                <element signature="e#6031#6037#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="doExercice.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/UserArea/doExercice.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="58" column="52" selection-start="3508" selection-end="3508" vertical-scroll-proportion="-11.714286">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -127,7 +134,7 @@
       <file leaf-file-name="exercices.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/UserArea/exercices.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="163" selection-start="4096" selection-end="4096" vertical-scroll-proportion="-3.25">
+            <state line="69" column="58" selection-start="2719" selection-end="2719" vertical-scroll-proportion="-21.208334">
               <folding />
             </state>
           </provider>
@@ -136,7 +143,16 @@
       <file leaf-file-name="studentList.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/UserArea/studentList.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="90" selection-start="1405" selection-end="1405" vertical-scroll-proportion="-6.875">
+            <state line="1" column="38" selection-start="72" selection-end="72" vertical-scroll-proportion="8.75">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="assignedExercices.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/UserArea/assignedExercices.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="70" selection-start="2342" selection-end="2342" vertical-scroll-proportion="-28.75">
               <folding />
             </state>
           </provider>
@@ -145,16 +161,7 @@
       <file leaf-file-name="editExercice.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/UserArea/editExercice.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="181" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="createExercice.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/UserArea/createExercice.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="74" selection-start="4172" selection-end="4172" vertical-scroll-proportion="0.0">
+            <state line="1" column="30" selection-start="64" selection-end="64" vertical-scroll-proportion="-0.625">
               <folding />
             </state>
           </provider>
@@ -163,7 +170,7 @@
       <file leaf-file-name="User.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="26" selection-start="2634" selection-end="2634" vertical-scroll-proportion="0.0">
+            <state line="94" column="36" selection-start="2644" selection-end="2644" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -172,7 +179,7 @@
       <file leaf-file-name="Exercice.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/Exercice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="28" selection-start="1215" selection-end="1215" vertical-scroll-proportion="0.0">
+            <state line="41" column="77" selection-start="995" selection-end="995" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -196,30 +203,30 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/Register/index.html" />
-        <option value="$PROJECT_DIR$/app/views/Application/index.html" />
         <option value="$PROJECT_DIR$/app/views/UserArea/index.html" />
         <option value="$PROJECT_DIR$/app/controllers/Application.java" />
         <option value="$PROJECT_DIR$/app/controllers/Register.java" />
-        <option value="$PROJECT_DIR$/app/views/UserArea/doExercice.html" />
         <option value="$PROJECT_DIR$/test/BasicTest.java" />
-        <option value="$PROJECT_DIR$/app/views/UserArea/editExercice.html" />
         <option value="$PROJECT_DIR$/app/views/UserArea/createExercice.html" />
+        <option value="$PROJECT_DIR$/conf/initdata.yml" />
         <option value="$PROJECT_DIR$/app/views/main_UserArea.html" />
         <option value="$PROJECT_DIR$/app/views/UserArea/studentList.html" />
-        <option value="$PROJECT_DIR$/conf/initdata.yml" />
+        <option value="$PROJECT_DIR$/app/views/UserArea/editExercice.html" />
+        <option value="$PROJECT_DIR$/app/views/UserArea/assignedExercices.html" />
+        <option value="$PROJECT_DIR$/public/javascripts/js/bootstrap-wysihtml5.js" />
         <option value="$PROJECT_DIR$/app/models/User.java" />
-        <option value="$PROJECT_DIR$/app/views/UserArea/exercices.html" />
+        <option value="$PROJECT_DIR$/app/views/UserArea/doExercice.html" />
         <option value="$PROJECT_DIR$/app/models/Exercice.java" />
+        <option value="$PROJECT_DIR$/app/views/UserArea/exercices.html" />
         <option value="$PROJECT_DIR$/app/controllers/UserArea.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1660" />
-    <option name="y" value="22" />
-    <option name="width" value="1538" />
-    <option name="height" value="1058" />
+    <option name="x" value="1521" />
+    <option name="y" value="-258" />
+    <option name="width" value="1678" />
+    <option name="height" value="1054" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -247,8 +254,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -278,6 +283,56 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="E-learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elearning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="E-learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elearning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="E-learning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elearning" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -431,6 +486,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -463,19 +520,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -501,6 +545,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -570,27 +627,27 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1660" y="22" width="1538" height="1058" extended-state="0" />
+    <frame x="1521" y="-258" width="1678" height="1054" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18356644" sideWeight="0.42719486" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16286863" sideWeight="0.0" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19240196" sideWeight="0.0" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -659,33 +716,14 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Bootstrap.java">
+    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/util/UUID.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="107" selection-end="107" vertical-scroll-proportion="0.05350773">
-          <folding />
-        </state>
+        <state line="21" column="26" selection-start="743" selection-end="743" vertical-scroll-proportion="0.33112583" />
       </provider>
     </entry>
-    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/lang/Object.class">
+    <entry file="file://$PROJECT_DIR$/app/views/main_UserArea.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="152" selection-end="152" vertical-scroll-proportion="0.08278146" />
-      </provider>
-    </entry>
-    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/util/List.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="31" selection-start="955" selection-end="955" vertical-scroll-proportion="0.75165564" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/UserArea/createExercice.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="74" selection-start="4172" selection-end="4172" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Applications/play-1.2.7/framework/src/play/db/jpa/GenericModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="298" column="27" selection-start="12552" selection-end="12552" vertical-scroll-proportion="0.33110368">
+        <state line="29" column="122" selection-start="1466" selection-end="1466" vertical-scroll-proportion="-18.125">
           <folding />
         </state>
       </provider>
@@ -697,78 +735,103 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/UserArea/editExercice.html">
+    <entry file="file://$PROJECT_DIR$/app/views/UserArea/createExercice.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="181" vertical-scroll-proportion="-0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main_UserArea.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="68" selection-start="3439" selection-end="3439" vertical-scroll-proportion="-0.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/initdata.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="17" selection-start="672" selection-end="672" vertical-scroll-proportion="0.49668875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/routes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/util/UUID.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="26" selection-start="743" selection-end="743" vertical-scroll-proportion="0.33112583">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="26" selection-start="2634" selection-end="2634" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/UserArea/exercices.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="163" selection-start="4096" selection-end="4096" vertical-scroll-proportion="-3.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Exercice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="28" selection-start="1215" selection-end="1215" vertical-scroll-proportion="0.0">
+        <state line="69" column="29" selection-start="4239" selection-end="4239" vertical-scroll-proportion="0.8687943">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/UserArea/studentList.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="90" selection-start="1405" selection-end="1405" vertical-scroll-proportion="-6.875">
+        <state line="1" column="38" selection-start="72" selection-end="72" vertical-scroll-proportion="8.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/lang/String.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="43" selection-start="3450" selection-end="3450" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/UserArea/editExercice.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="30" selection-start="64" selection-end="64" vertical-scroll-proportion="-0.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/css/matrix-style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="308" column="12" selection-start="7141" selection-end="7152" vertical-scroll-proportion="-0.23550296">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/js/bootstrap-wysihtml5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="479" column="0" selection-start="20640" selection-end="20640" vertical-scroll-proportion="0.8992161">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/javax/xml/datatype/Duration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="22" selection-start="170" selection-end="170" vertical-scroll-proportion="0.08278146">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="36" selection-start="2644" selection-end="2644" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/UserArea/doExercice.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="52" selection-start="3508" selection-end="3508" vertical-scroll-proportion="-11.714286">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Exercice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="77" selection-start="995" selection-end="995" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/UserArea/assignedExercices.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="70" selection-start="2342" selection-end="2342" vertical-scroll-proportion="-28.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/UserArea/exercices.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="58" selection-start="2719" selection-end="2719" vertical-scroll-proportion="-21.208334">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/UserArea.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="73" selection-start="734" selection-end="734" vertical-scroll-proportion="-0.032967035">
+        <state line="282" column="7" selection-start="7751" selection-end="7751" vertical-scroll-proportion="0.16572078">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#845#851#0" expanded="true" />
-            <element signature="e#1581#1590#0" expanded="true" />
-            <element signature="e#2433#2442#0" expanded="true" />
-            <element signature="e#4321#4329#0" expanded="true" />
-            <element signature="e#4379#4387#0" expanded="true" />
-            <element signature="e#5071#5077#0" expanded="true" />
+            <element signature="e#978#984#0" expanded="true" />
+            <element signature="e#1426#1436#0" expanded="true" />
+            <element signature="e#2140#2149#0" expanded="true" />
+            <element signature="e#2992#3001#0" expanded="true" />
+            <element signature="e#4725#4733#0" expanded="true" />
+            <element signature="e#5281#5289#0" expanded="true" />
+            <element signature="e#5339#5347#0" expanded="true" />
+            <element signature="e#6031#6037#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -41,12 +41,13 @@ public class Exercice extends Model {
 		this.solution = solution;
 		this.description = description;
 		this.done = false;
-		this.time = "0";
-		this.mistakes = "0";
+		this.time = "null";
+		this.mistakes = "null";
         this.createdBy = createdBy;
         this.deleted = false;
         this.creationDate = Calendar.getInstance().getTime();
         this.copied = false;
+        this.users = new ArrayList<User>();
 	}
 
 }

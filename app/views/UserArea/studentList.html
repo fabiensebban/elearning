@@ -1,5 +1,5 @@
 #{extends 'main_UserArea.html' /}
-#{set title:'E-learning - Exercices' /}
+#{set title:'E-learning - Sutdent List' /}
 
 
 #{set isStudent: user.isStudent/}
@@ -50,6 +50,7 @@
                                 <th>email</th>
                                 <th>Course</th>
                                 <th>Total Exercices Done</th>
+                                <th>Assigned exercices</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -59,6 +60,7 @@
                                 <td>${student.email}</td>
                                 <td>${student.course}</td>
                                 <td>${student.totalExercicesDone}</td>
+                                <td><a href="@{assignedExercices(student.id)}" class="btn btn-success btn-mini center">See all</a></td>
                             </tr>
                             #{/list}
                             </tbody>

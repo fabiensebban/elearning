@@ -476,3 +476,4 @@
     };
 
 }(window.jQuery, window.wysihtml5);
+

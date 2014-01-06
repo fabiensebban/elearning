@@ -1,0 +1,75 @@
+#{extends 'main_UserArea.html' /}
+#{set title:'E-learning - Assigned exercices' /}
+
+
+#{set isStudent: user.isStudent/}
+#{set isTutor: user.isTutor/}
+#{set isTeacher: user.isTeacher/}
+
+<div id="content">
+    <div id="content-header">
+        <div id="breadcrumb"> </div>
+        <h1>Assigned Exercices</h1>
+    </div>
+    <div class="container-fluid">
+        <hr>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title">
+                        <span class="icon"> <i class="icon-th"></i> </span>
+                        <h5>List of exercices</h5>
+                    </div>
+                    <div class="widget-content nopadding">
+                        #{if exercices}
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                            <tr>
+                                <th>Student</th>
+                                <th>Done</th>
+                                <th>Description</th>
+                                <th>Maximum Time</th>
+                                <th>Spent Time</th>
+                                <th>Maximum Mistakes</th>
+                                <th>Mistakes</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            #{list exercices, as:'exercice'}
+                            <tr class="odd gradeX">
+                                <td>${exercice.users.get(0).fullname}</td>
+                                <td>
+                                #{if exercice.done}
+                                    <i class="icon-ok-circle"></i>
+                                #{/if}
+                                </td>
+                                <td>${exercice.description}</td>
+                                <td>${exercice.maxTime}</td>
+                                <td>
+                                    #{ifnot exercice.time == '0'}
+                                    ${exercice.time}
+                                    #{/ifnot}
+                                </td>
+                                <td>${exercice.maxMistakes}</td>
+                                <td>
+                                    #{ifnot exercice.mistakes == 'null'}
+                                    ${exercice.mistakes}
+                                    #{/ifnot}
+                                </td>
+                            </tr>
+                            #{/list}
+                            </tbody>
+                        </table>
+                        #{/if}
+
+                        #{else}
+                        There is no assigned exercices.
+                        #{/else}
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

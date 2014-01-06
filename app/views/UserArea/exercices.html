@@ -42,25 +42,43 @@
     </div>
     <div class="widget-content nopadding">
         #{if user.isStudent}
-            #{if user.exercices}
+            #{if exercices}
             <table class="table table-bordered table-striped">
                 <thead>
                 <tr>
+                    <th>Done</th>
                     <th>Description</th>
                     <th>Maximum Time</th>
+                    <th>Time</th>
                     <th>Maximum Mistakes</th>
+                    <th>Mistakes</th>
                     <th>Creation Date</th>
                     <th></th>
                 </tr>
                 </thead>
                 <tbody>
-                #{list connected.exercices, as:'exercice'}
+                #{list exercices, as:'exercice'}
                     <tr class="odd gradeX">
-                        <td>${user.exercice.description}</td>
-                        <td>${user.exercice.maxTime}</td>
-                        <td>${user.exercice.maxMistakes}</td>
-                        <td>${user.exercice.creationDate.format('dd/MM/yyyy hh:mm:ss', '24')}}</td>
-                        <td><a href="@{exercice(exercice.id)}" class="btn btn-primary btn-mini">Do it!</a></td>
+                        <td>
+                            #{if exercice.done}
+                            <i class="icon-ok-circle"></i>
+                            #{/if}
+                        </td>
+                        <td>${exercice.description}</td>
+                        <td>${exercice.maxTime}</td>
+                        <td>
+                            #{ifnot exercice.time == 'null'}
+                            ${exercice.time}
+                            #{/ifnot}
+                        </td>
+                        <td>${exercice.maxMistakes}</td>
+                        <td>
+                            #{ifnot exercice.mistakes == 'null'}
+                            ${exercice.mistakes}
+                            #{/ifnot}
+                        </td>
+                        <td>${exercice.creationDate.format('dd/MM/yyyy hh:mm:ss', '24')}</td>
+                        <td><a href="@{doExercice(exercice.id)}" class="btn btn-primary btn-mini">Do it!</a></td>
                     </tr>
                 #{/list}
                 </tbody>
@@ -95,8 +113,8 @@
                     <td>
                         <a href="@{editExercice(exercice.id)}" class="btn btn-primary btn-mini">Edit</a>
                         <a href="@{deleteExercice(exercice.id)}" class="btn btn-danger btn-mini">Delete</a>
-                            #{form @userArea.assignExerciceToStudent()}
-                            <a id="assign-event" data-toggle="modal" href="#assign" class="btn btn-success btn-mini"> <i class="icon-plus icon-white"></i>Assign to student</a>
+                        <a id="assign-event" data-toggle="modal" href="#assign" class="btn btn-success btn-mini">Assign to student</a>
+                        #{form @userArea.assignExerciceToStudent()}
                             <div class="modal hide" id="assign">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal">×</button>

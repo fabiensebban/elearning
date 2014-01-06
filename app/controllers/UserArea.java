@@ -7,8 +7,12 @@ import java.util.*;
 
 import models.*;
 import play.data.validation.*;
+import java.text.SimpleDateFormat;
 
 import java.util.ArrayList;
+import org.joda.time.*;
+import play.templates.JavaExtensions;
+import javax.xml.datatype.Duration;
 
 public class UserArea extends Application {
 
@@ -40,9 +44,23 @@ public class UserArea extends Application {
                 i++;
 
             }
+
             render(user, created_exercices, students);
         }
-        render(user);
+
+        int i = 0 ;
+        List<Exercice> exercices = new ArrayList<Exercice>();
+        while(i<user.exercices.size()){
+
+            if( user.exercices.get(i).done == false || user.exercices.get(i).deleted == false)
+            {
+                exercices.add(user.exercices.get(i));
+            }
+            i++;
+            System.out.println("He pasado or aqui veces: " + user.exercices.size());
+        }
+
+        render(user, exercices);
     }
 
     public static void createExercice(String formulations) {
@@ -141,7 +159,23 @@ public class UserArea extends Application {
         }
     }
 
-    public static void doExecice(String id) {
+    public static void doExercice(Long id) {
+
+        User user = connected();
+        Exercice exercice = Exercice.findById(id);
+        DateTime startTime = new DateTime();
+
+        List<String> formulations = new ArrayList<String>();
+        int i = 0;
+
+        while (i < exercice.formulation.length){
+
+            formulations.add(exercice.formulation[i]);
+            i++;
+
+        }
+
+        render(user,exercice, formulations, startTime);
 
     }
 
@@ -221,8 +255,7 @@ public class UserArea extends Application {
             Exercice exercice = Exercice.findById(idExercice);
 
             //we copie the exercice for asssign it to a student.
-            String identifier = java.util.UUID.randomUUID().toString();
-            Exercice copied_exercice = new Exercice(identifier, exercice.maxTime, exercice.maxMistakes,
+            Exercice copied_exercice = new Exercice(exercice.identifier, exercice.maxTime, exercice.maxMistakes,
                     exercice.formulation, exercice.solution, exercice.description, exercice.createdBy);
             copied_exercice.copied = true;
             copied_exercice.save();
@@ -231,6 +264,48 @@ public class UserArea extends Application {
             i++;
         }
 
+        UserArea.exercices();
+    }
+
+    public static void assignedExercices(Long user_id){
+
+        User user = connected();
+        User student = User.findById(user_id);
+        List<Exercice> exercices = student.exercices;
+        render(user, exercices);
+
+    }
+
+    public static void validateExercice(String startTime){
+
+        Long exerciceId = Long.parseLong(params.get("exerciceId"));
+        Exercice exercice = Exercice.findById(exerciceId);
+        DateTime et = new DateTime();
+        DateTime st = new DateTime(startTime);
+        Period period = new Period(st, et);
+
+        int mistakes = 0;
+        int i = 0;
+
+        //Check how many mistakes the student did.
+        while(i < exercice.formulation.length){
+            if(!params.get("solution"+i).equalsIgnoreCase(exercice.solution[i])){
+                mistakes++;
+            }
+            i++;
+        }
+
+
+        exercice.time = ""+period.getMinutes()+"";
+
+        exercice.mistakes = ""+mistakes+"";
+
+        //We consider that an exercice is done only if complish the specification the teacher set previously
+        if(Integer.parseInt(exercice.time) <= Integer.parseInt(exercice.maxTime) && Integer.parseInt(exercice.mistakes) <= Integer.parseInt(exercice.maxMistakes)){
+            exercice.done = true;
+        }
+
+        exercice.save();
         UserArea.exercices();
     }
 }

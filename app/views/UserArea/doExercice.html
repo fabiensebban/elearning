@@ -1,0 +1,71 @@
+#{extends 'main_UserArea.html' /}
+#{set title:'E-learning - Do Exercice' /}
+
+
+#{set isStudent: user.isStudent/}
+#{set isTutor: user.isTutor/}
+#{set isTeacher: user.isTeacher/}
+
+<div id="content">
+    <div id="content-header">
+        <div id="breadcrumb"></div>
+        <h1>Create Exercice</h1>
+    </div>
+    <div class="container-fluid"><hr>
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="widget-box">
+                    <div class="widget-title"> <span class="icon"> <i class="icon-info-sign"></i> </span>
+                        <h5>Exercice</h5>
+                    </div>
+                    <div class="widget-content nopadding">
+                        <form enctype="application/x-www-form-urlencoded" accept-charset="utf-8" class="form-horizontal" action="/userarea/validateexercice" method="post" name="basic_validate" id="basic_validate">
+                            <div class="control-group">
+                                <label class="control-label">Description :</label>
+                                <div class="controls">
+                                    <input type="text" name="description" id="description" value="${exercice.description}" class="span11" readonly="readonly">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Maximum mistakes :</label>
+                                <div class="controls">
+                                    <input type="text" name="maxMistakes" id="maxMistakes" value="${exercice.maxMistakes}" class="span11" readonly="readonly">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Maximum spended time :</label>
+                                <div class="controls">
+                                    <input type="text" name="maxTime" id="maxTime" value="${exercice.maxTime}" class="span11" readonly="readonly">
+                                    <span class=help-block>Time in minutes</span>
+                                </div>
+                            </div>
+                            #{list formulations, as:'formulation'}
+                            <div class="control-group">
+                                <label class="control-label">Formulation ${formulation_index} :</label>
+                                <div class="controls">
+                                    <textarea readonly="readonly" class="span11" name="formulation${formulation_index - 1}">${formulation}</textarea>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label">Solution ${formulation_index} :</label>
+                                <div class="controls">
+                                    <textarea class="span11" name="solution${formulation_index - 1}"></textarea>
+                                </div>
+                            </div>
+                            #{/list}
+                            <input type="hidden" value="${exercice.id}" name="exerciceId">
+                            <div class="form-actions">
+                                <input id="finish" type="submit" value="Finish" class="btn btn-success">
+                                <input id="startTime" name="startTime" type="hidden" value="${startTime}">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('.textarea_editor').wysihtml5();
+</script>

@@ -111,8 +111,11 @@ public class User extends Model{
 
         User student = User.find("byEmail", email_student).first();
         Exercice ex = Exercice.find("byIdentifier", identifier).first();
+        ex.users.add(student);
+        ex.save();
         student.exercices.add(ex);
         student.save();
+
         return student;
 
     }
