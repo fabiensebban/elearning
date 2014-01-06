@@ -19,7 +19,6 @@
                     <div class="widget-title">
                         <span class="icon"> <i class="icon-th"></i> </span>
                         <h5>List of students</h5>
-                        #{if user.isTeacher}
                         <div class="buttons">
                             #{form @userArea.addStudent()}
                             <a id="add-event" data-toggle="modal" href="#modal-add-event" class="btn btn-success btn-mini"> <i class="icon-plus icon-white"></i>Add student</a>
@@ -70,8 +69,6 @@
                         #{else}
                         You have no students in your list.
                         #{/else}
-
-                        #{/if}
                     </div>
                 </div>
 

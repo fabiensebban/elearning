@@ -241,7 +241,12 @@ public class UserArea extends Application {
 
     public static void addStudent(String studentEmail) {
 
+        if(connected().isTeacher){
         connected().assignStudentToTeacher(studentEmail, connected().email);
+        }
+        else{
+            connected().assignStudentToTutor(studentEmail, connected().email);
+        }
         UserArea.studentList();
     }
 
