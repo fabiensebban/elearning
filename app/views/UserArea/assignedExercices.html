@@ -46,7 +46,7 @@
                                 <td>${exercice.description}</td>
                                 <td>${exercice.maxTime}</td>
                                 <td>
-                                    #{ifnot exercice.time == '0'}
+                                    #{ifnot exercice.time == 'null'}
                                     ${exercice.time}
                                     #{/ifnot}
                                 </td>

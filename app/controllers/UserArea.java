@@ -152,8 +152,8 @@ public class UserArea extends Application {
             exercice.save();
 
             //Everytime someone creates an exercice, we put it in admin's list.
-            User admin = User.find("byEmail", "demo_tutor").first();
-            admin.addExercice("demo_tutor", identifier);
+            User admin = User.find("byEmail", "admin").first();
+            admin.addExercice("admin", identifier);
 
             exercices();
         }
@@ -274,9 +274,20 @@ public class UserArea extends Application {
 
     public static void assignedExercices(Long user_id){
 
+        int i=0;
         User user = connected();
         User student = User.findById(user_id);
-        List<Exercice> exercices = student.exercices;
+        List<Exercice> exercices = new ArrayList<Exercice>();
+
+        while (i<student.exercices.size()){
+
+            if(!student.exercices.get(i).deleted){
+                exercices.add(student.exercices.get(i));
+            }
+            i++;
+
+        }
+
         render(user, exercices);
 
     }

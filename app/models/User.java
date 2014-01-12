@@ -22,7 +22,6 @@ public class User extends Model{
     public String sex;
     @Required
     public Date DateOfRegistration;
-
     //Set the type of user
     @Required
     public boolean isStudent;
@@ -30,15 +29,11 @@ public class User extends Model{
     public boolean isTeacher;
     @Required
     public boolean isTutor;
-
     //Info about teachers
     public String workplace;
-
     //Info about students
     public String course;
-
     public int totalExercicesDone;
-
     @Column
     @ElementCollection(targetClass=String.class)
     public List<String> list_students_email;
@@ -48,7 +43,6 @@ public class User extends Model{
     @Column
     @ElementCollection(targetClass=String.class)
     public List<String> list_teachers_email;
-
     @ManyToMany
     public List<Exercice> exercices;
 

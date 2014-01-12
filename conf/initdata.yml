@@ -34,4 +34,14 @@ models.User(demo_student):
     isStudent:  true
     isTeacher:  false
 
-
+models.User(admin):
+    email:   admin
+    password:   admin
+    fullname:       Admin
+    DateOfBirth: 15/08/1991
+    sex:     m
+    course:  4ESO
+    DateOfRegistration:  01/11/2013
+    isTutor:   true
+    isStudent:  true
+    isTeacher:  true

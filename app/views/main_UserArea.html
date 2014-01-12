@@ -67,7 +67,9 @@
         <li><a href="@{UserArea.studentList()}"><i class="icon icon-group"></i> <span>My students</span></a> </li>
         #{/if}
         #{else}
+        #{ifnot isStudent}
         <li><a href="@{UserArea.studentList()}"><i class="icon icon-group"></i> <span>My students</span></a> </li>
+        #{/ifnot}
         #{/else}
     </ul>
 </div>
